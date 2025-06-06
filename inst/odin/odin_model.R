@@ -539,3 +539,4 @@ output(d_ITN0) <- d_ITN0
 output(r_ITN0) <- r_ITN0
 output(bites_Bed) <- bites_Bed
 output(Q0) <- Q0
+output(irs_loss) <- irs_loss
