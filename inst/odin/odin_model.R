@@ -230,6 +230,7 @@ dim(rel_foi) <- nh
 rel_foi[] <- user()
 dim(EIR) <- c(na,nh,num_int)
 EIR[,,] <- av_human[k] * rel_foi[j] * foi_age[i] * Iv/omega
+EIR_tot <- sum(EIR[,,])
 output(Ivout) <- Iv
 
 output(omega) <- omega
@@ -240,7 +241,7 @@ output(omega) <- omega
 ##------------------------------------------------------------------------------
 
 # Seasonality is added into the model using a Fourier series that was fit to rainfall at every admin 1 level
-pi <- user() # weird quirk, need to pass pi
+pi <- user()
 
 # The parameters for the fourier series
 ssa0 <- user()
@@ -532,3 +533,9 @@ output(r_IRS) <- r_IRS
 output(s_IRS) <- s_IRS
 output(cov[]) <- TRUE
 output(K0) <- K0
+output(itn_cov) <- itn_cov
+output(EIR_tot) <- EIR_tot
+output(d_ITN0) <- d_ITN0
+output(r_ITN0) <- r_ITN0
+output(bites_Bed) <- bites_Bed
+output(Q0) <- Q0
